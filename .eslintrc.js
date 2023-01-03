@@ -1,105 +1,16 @@
 module.exports = {
   root: true,
-  env: {
-    jest: true,
-    browser: true,
-    es2021: true,
-  },
-  extends: [
-    'plugin:@next/next/recommended',
-    'airbnb-typescript',
-    'prettier',
-    'plugin:react-hooks/recommended',
-  ],
+  extends: '@react-native-community',
   parser: '@typescript-eslint/parser',
-  parserOptions: {
-    project: './tsconfig.json',
-    ecmaFeatures: {
-      jsx: true,
+  plugins: ['@typescript-eslint'],
+  overrides: [
+    {
+      files: ['*.ts', '*.tsx'],
+      rules: {
+        '@typescript-eslint/no-shadow': ['error'],
+        'no-shadow': 'off',
+        'no-undef': 'off',
+      },
     },
-    ecmaVersion: 12,
-    sourceType: 'module',
-  },
-  plugins: [
-    'import',
-    'react',
-    '@typescript-eslint',
-    'eslint-plugin-jsx-a11y',
-    'jest',
-    'jest-dom',
-    'testing-library',
   ],
-  settings: {
-    react: {
-      version: 'detect',
-    },
-    'import/resolver': {
-      typescript: {
-        alwaysTryTypes: true,
-      },
-    },
-  },
-  rules: {
-    'object-curly-spacing': ['warn', 'always'],
-    'no-unused-vars': [
-      'warn',
-      {
-        vars: 'all',
-        args: 'none',
-      },
-    ],
-    '@typescript-eslint/semi': ['off'],
-    '@typescript-eslint/no-unused-vars': [
-      'warn',
-      {
-        vars: 'all',
-        args: 'none',
-      },
-    ],
-    '@typescript-eslint/no-explicit-any': [
-      'error',
-      {
-        ignoreRestArgs: true,
-      },
-    ],
-    'max-len': [
-      'warn',
-      {
-        code: 200,
-        ignoreStrings: true,
-        ignoreTemplateLiterals: true,
-        ignoreComments: true,
-      },
-    ],
-    'no-plusplus': [
-      'error',
-      {
-        allowForLoopAfterthoughts: true,
-      },
-    ],
-    'react/jsx-key': 'error',
-    'import/no-extraneous-dependencies': [
-      0,
-      {
-        devDependencies: [
-          '**/*.test.js',
-          '**/*.test.jsx',
-          '**/*.test.ts',
-          '**/*.test.tsx',
-          '**/*.stories.ts',
-          '**/*.stories.tsx',
-          'src/tests/**/*',
-        ],
-      },
-    ],
-    'react/jsx-props-no-spreading': 'off',
-    'import/prefer-default-export': 'off',
-    'react/jsx-boolean-value': 'off',
-    'react/prop-types': 'off',
-    'react/no-unescaped-entities': 'off',
-    'react/jsx-one-expression-per-line': 'off',
-    'react/jsx-wrap-multilines': 'off',
-    'react/destructuring-assignment': 'off',
-    'import/extensions': 'off',
-  },
 };
