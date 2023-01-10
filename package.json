@@ -10,10 +10,13 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
+    "deprecated-react-native-prop-types": "4.0.0",
     "react": "18.1.0",
     "react-native": "0.70.6",
-    "react-native-camera": "^4.2.1",
-    "styled-components": "^5.3.6"
+    "react-native-camera": "4.2.1",
+    "react-native-camera-hooks": "0.5.3",
+    "react-native-fs": "2.20.0",
+    "styled-components": "5.3.6"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
@@ -24,7 +27,7 @@
     "@types/react": "^18.0.21",
     "@types/react-native": "^0.70.6",
     "@types/react-test-renderer": "^18.0.0",
-    "@types/styled-components": "^5.1.26",
+    "@types/styled-components": "5.1.26",
     "@typescript-eslint/eslint-plugin": "^5.37.0",
     "@typescript-eslint/parser": "^5.37.0",
     "babel-jest": "^26.6.3",
