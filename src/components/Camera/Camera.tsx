@@ -14,7 +14,7 @@ const Camera = () => {
   return (
     <Container>
       <Cam ref={cameraRef}>
-        <RecordingText>Recording will beging in...</RecordingText>
+        <RecordingText>Recording will begin in...</RecordingText>
         <Countdown>{seconds}</Countdown>
       </Cam>
     </Container>
